@@ -6,3 +6,29 @@
  * sortByString(s, t) = "theeraw". For s = "good" and t = "odg", the output
  * should be sortByString(s, t) = "oodg".
  */
+const testCases = [
+  {
+    expected: "theeraw",
+    actual: sortByString("weather", "therapyw")
+  },
+  {
+    expected: "oodg",
+    actual: sortByString("good", "odg")
+  },
+  {
+    expected: "tac",
+    actual: sortByString("cat", "tac")
+  }
+];
+
+function assert(expected, actual) {
+  if (expected === actual) {
+    console.log("PASSED");
+  } else {
+    console.log(`FAILED: Expected ${expected} but got ${actual}`);
+  }
+}
+
+testCases.forEach(({ expected, actual }) => {
+  assert(expected, actual);
+});
