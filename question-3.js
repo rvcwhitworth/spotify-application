@@ -17,6 +17,26 @@
  * 2¢, 2¢
  */
 
+const changePossibilities = function(amount, denominations) {
+  var possibilities = 0;
+
+  const backTrack = function(runningTotal, currentIndex) {
+    if (runningTotal === amount) {
+      possibilities++;
+      return;
+    }
+
+    for (let i = currentIndex; i < denominations.length; i++) {
+      if (runningTotal + denominations[i] <= amount) {
+        backTrack(runningTotal + denominations[i], i);
+      }
+    }
+  };
+
+  backTrack(0, 0);
+  return possibilities;
+};
+
 const testCases = [
   {
     expected: 4,
