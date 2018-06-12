@@ -6,6 +6,20 @@
  * sortByString(s, t) = "theeraw". For s = "good" and t = "odg", the output
  * should be sortByString(s, t) = "oodg".
  */
+
+const sortByString = function(s, t) {
+  var characterPositions = {};
+
+  for (let i = 0; i < t.length; i++) {
+    characterPositions[t[i]] = i;
+  }
+
+  return s
+    .split("")
+    .sort((a, b) => characterPositions[a] - characterPositions[b])
+    .join("");
+};
+
 const testCases = [
   {
     expected: "theeraw",
