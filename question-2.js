@@ -9,3 +9,26 @@
  * For s = "2[b3[a]]", the output should be decodeString(s) = "baaabaaa"
  *
  */
+
+const testCases = [
+  {
+    expected: "abababab",
+    actual: decodeString("4[ab]")
+  },
+  {
+    expected: "baaabaaa",
+    actual: decodeString("2[b3[a]]")
+  },
+  {
+    expected: "",
+    actual: decodeString("3[]")
+  }
+];
+
+function assert(expected, actual) {
+  if (expected === actual) {
+    console.log("PASSED");
+  } else {
+    console.log(`FAILED: Expected ${expected} but got ${actual}`);
+  }
+}
