@@ -11,8 +11,8 @@
  */
 
 const decodeString = function(s) {
-  var decoded = "";
-  var { count, encodedSubstring } = getCountAndSubstring(s);
+  let decoded = "";
+  let { count, encodedSubstring } = getCountAndSubstring(s);
 
   if (encodedSubstring.includes("[")) {
     let { leadingCharacters, startPosition } = getLeadingCharactersAndPosition(
@@ -38,8 +38,8 @@ const decodeString = function(s) {
 };
 
 const getCountAndSubstring = function(encodedString) {
-  var count = "";
-  var position = 0;
+  let count = "";
+  let position = 0;
   while (encodedString[position] !== "[") {
     count += encodedString[position];
     position++;

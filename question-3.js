@@ -18,7 +18,7 @@
  */
 
 const changePossibilities = function(amount, denominations) {
-  var possibilities = 0;
+  let possibilities = 0;
 
   const backTrack = function(runningTotal, currentIndex) {
     if (runningTotal === amount) {

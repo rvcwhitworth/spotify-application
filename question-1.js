@@ -8,7 +8,7 @@
  */
 
 const sortByString = function(s, t) {
-  var characterPositions = {};
+  let characterPositions = {};
 
   for (let i = 0; i < t.length; i++) {
     characterPositions[t[i]] = i;
